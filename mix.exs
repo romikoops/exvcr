@@ -2,7 +2,8 @@ defmodule ExVCR.Mixfile do
   use Mix.Project
 
   def project do
-    [ app: :exvcr,
+    [
+      app: :exvcr,
       version: "0.10.3",
       elixir: "~> 1.3",
       deps: deps(),
@@ -24,7 +25,7 @@ defmodule ExVCR.Mixfile do
     [
       {:meck, "~> 0.8"},
       {:exactor, "~> 2.2"},
-      {:exjsx, "~> 4.0"},
+      {:exjsx, github: "romikoops/exjsx", branch: "master"},
       {:ibrowse, "~> 4.4", optional: true},
       {:httpotion, "~> 3.1", optional: true},
       {:httpoison, "~> 1.0", optional: true},
@@ -41,8 +42,10 @@ defmodule ExVCR.Mixfile do
   end
 
   defp package do
-    [ maintainers: ["parroty"],
+    [
+      maintainers: ["parroty"],
       licenses: ["MIT"],
-      links: %{"GitHub" => "https://github.com/parroty/exvcr"} ]
+      links: %{"GitHub" => "https://github.com/parroty/exvcr"}
+    ]
   end
 end
